@@ -1,0 +1,1 @@
+Vue.js Support for the Intellij Platform (WebStorm, PhpStorm, Rubymine, Intellij, etc)

@@ -1,0 +1,33 @@
+<idea-plugin version="2">
+  <name>Vue.js</name>
+  <description>Support for Vue.js</description>
+  <version>1.0.0</version>
+  <vendor email="johnmkelly86@gmail.com">John Kelly</vendor>
+
+  <change-notes><![CDATA[
+      <html>
+      <dl>
+      <dt>1.0.0</dt>
+      <dd>Basic v attribute autocompletion based on included DTD.
+      </dl>
+      </html>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>JavaScript</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <xml.attributeDescriptorsProvider implementation="org.vuejs.VueJSCustomAttributeDescriptorsProvider"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
