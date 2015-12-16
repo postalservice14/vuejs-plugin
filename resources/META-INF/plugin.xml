@@ -17,6 +17,12 @@
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="141.0"/>
 
+  <project-components>
+    <component>
+      <implementation-class>org.vuejs.VueJS</implementation-class>
+    </component>
+  </project-components>
+
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
   <depends>JavaScript</depends>
@@ -24,6 +30,8 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <xml.attributeDescriptorsProvider implementation="org.vuejs.VueJSCustomAttributeDescriptorsProvider"/>
+
+    <fileTypeFactory implementation="org.vuejs.VueJSFileFactory" />
   </extensions>
 
   <actions>
