@@ -36,7 +36,7 @@ open class VueJS(project: Project) : AbstractProjectComponent(project) {
     override fun initComponent() {
         attrs = directiveNames.map { name -> VueJSAttributeDescriptor("v-" + name)}
         attrs.forEach {
-            descriptor -> attrLookup.put(descriptor.getName()!!, descriptor)
+            descriptor -> attrLookup.put(descriptor.name!!, descriptor)
         }
         attrArray = attrs.toTypedArray()
     }

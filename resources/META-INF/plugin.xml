@@ -7,14 +7,15 @@
   <change-notes><![CDATA[
       <html>
       <dl>
+      <dt>1.0.1</dt>
+      <dd>Fixed autocompletion.  Added very limited *.vue file recognition.
       <dt>1.0.0</dt>
-      <dd>Basic v attribute autocompletion based on included DTD.
+      <dd>Basic v attribute autocompletion
       </dl>
       </html>
     ]]>
   </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="141.0"/>
 
   <project-components>
@@ -23,8 +24,6 @@
     </component>
   </project-components>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
   <depends>JavaScript</depends>
   <depends>com.intellij.modules.platform</depends>
 
