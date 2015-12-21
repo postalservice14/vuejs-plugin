@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <name>Vue.js</name>
   <description>Support for Vue.js</description>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <vendor email="johnmkelly86@gmail.com">John Kelly</vendor>
 
   <change-notes><![CDATA[
