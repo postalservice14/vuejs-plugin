@@ -1,5 +1,6 @@
 package org.vuejs.lang;
 
+import com.intellij.lang.html.HTMLLanguage;
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -10,8 +11,8 @@ public class VueJSFileType extends LanguageFileType {
 
     public static final VueJSFileType INSTANCE = new VueJSFileType();
 
-    protected VueJSFileType() {
-        super(VueJSLanguage.INSTANCE);
+    private VueJSFileType() {
+        super(HTMLLanguage.INSTANCE);
     }
 
     @NotNull

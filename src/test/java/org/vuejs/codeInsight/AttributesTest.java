@@ -1,9 +1,9 @@
-package org.vuejs;
+package org.vuejs.codeInsight;
 
 import com.intellij.testFramework.fixtures.LightPlatformCodeInsightFixtureTestCase;
+import org.vuejs.VueJSTestUtil;
 
 public class AttributesTest extends LightPlatformCodeInsightFixtureTestCase {
-
     @Override
     protected String getTestDataPath() {
         return VueJSTestUtil.getBaseTestDataPath(getClass()) + "attributes";

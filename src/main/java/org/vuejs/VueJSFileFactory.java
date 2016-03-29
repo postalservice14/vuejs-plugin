@@ -6,8 +6,9 @@ import org.jetbrains.annotations.NotNull;
 import org.vuejs.lang.VueJSFileType;
 
 public class VueJSFileFactory extends FileTypeFactory {
+
     @Override
     public void createFileTypes(@NotNull FileTypeConsumer consumer) {
-        consumer.consume(VueJSFileType.INSTANCE, "VueJS");
+        consumer.consume(VueJSFileType.INSTANCE);
     }
 }
