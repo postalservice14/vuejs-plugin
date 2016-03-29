@@ -1,9 +1,3 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-}
-
 plugins {
     id "org.jetbrains.intellij" version "0.0.43"
 }
@@ -12,17 +6,21 @@ apply plugin: 'idea'
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'java'
 
-compileJava {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-}
+sourceCompatibility = 1.8
 
 version = getVersionName()
 
+repositories {
+    mavenCentral()
+}
+
 intellij {
-    version '2016.1'
-    plugins ['JavascriptLanguage']
-    pluginName 'Vue.js'
+    type = 'IU'
+    version = '2016.1'
+    downloadSources true
+    plugins = ['JavascriptLanguage']
+    pluginName = 'Vue.js'
+    updateSinceUntilBuild = false
 
     publish {
       pluginId '8057'
