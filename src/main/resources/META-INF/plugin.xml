@@ -1,4 +1,5 @@
 <idea-plugin version="2">
+  <id>org.vuejs</id>
   <name>Vue.js</name>
   <description>Support for Vue.js</description>
   <version>1.0.1</version>
@@ -7,6 +8,8 @@
   <change-notes><![CDATA[
       <html>
       <dl>
+      <dt>1.1.0</dt>
+      <dd>Fixed autocompletion for real.  Increased *.vue file recognition.  Fixed plugin loading issues.
       <dt>1.0.1</dt>
       <dd>Fixed autocompletion.  Added very limited *.vue file recognition.
       <dt>1.0.0</dt>
@@ -18,17 +21,11 @@
 
   <idea-version since-build="141.0"/>
 
-  <project-components>
-    <component>
-      <implementation-class>org.vuejs.VueJS</implementation-class>
-    </component>
-  </project-components>
-
   <depends>JavaScript</depends>
-  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">
-    <xml.attributeDescriptorsProvider implementation="org.vuejs.VueJSCustomAttributeDescriptorsProvider"/>
+    <xml.attributeDescriptorsProvider implementation="org.vuejs.codeInsight.attributes.VueJSAttributeDescriptorsProvider" order="first"/>
 
     <fileTypeFactory implementation="org.vuejs.VueJSFileFactory" />
   </extensions>

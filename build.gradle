@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.0.43"
+}
+
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+version = getVersionName()
+
+intellij {
+    version '2016.1'
+    plugins ['JavascriptLanguage']
+    pluginName 'Vue.js'
+
+    publish {
+      pluginId '8057'
+      username "$JETBRAINS_USERNAME"
+      password "$JETBRAINS_PASSWORD"
+    }
+}
+
+test {
+  testLogging {
+    exceptionFormat = 'full'
+  }
+}
+
+repositories {
+    mavenCentral()
+}
+
+/*
+ * Gets the version name from the latest Git tag
+ */
+def getVersionName() {
+    def stdout = new ByteArrayOutputStream()
+    try {
+        exec {
+            commandLine 'git', 'describe', '--tags'
+            standardOutput = stdout
+        }
+    } catch (ignored) {
+        return '0.0.0'
+    }
+
+    def version = stdout.toString().trim()
+    if (version.startsWith('v'))
+        version = version.substring(1)
+
+    return version
+}
