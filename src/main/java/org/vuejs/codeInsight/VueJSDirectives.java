@@ -17,7 +17,9 @@ public class VueJSDirectives {
             "v-ref",
             "v-el",
             "v-pre",
-            "v-cloak"
+            "v-cloak",
+            "v-once",
+            "v-else-if",
     );
 
     public static List<String> getDirectives() {
