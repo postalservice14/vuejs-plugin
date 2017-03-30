@@ -1,4 +1,4 @@
-ue.js Support for the Intellij Platform (WebStorm, PhpStorm, Rubymine, Intellij, etc)
+Vue.js Support for the Intellij Platform (WebStorm, PhpStorm, Rubymine, Intellij, etc)
 
 # Install
 You can install it via Settings -> Plugins -> Browse repositories -> (search for) Vue.js
