@@ -21,8 +21,6 @@ This is example for `scss`:
 	}
 </style>
 ```
-Credit goes to @romangit in issue #14
-
 
 # Contributing
 This project is still a work in progress.  I welcome ideas and additions.  My goal is to make it have similar functionality and features as the [angularjs-plugin](https://github.com/JetBrains/intellij-plugins/tree/master/AngularJS).
