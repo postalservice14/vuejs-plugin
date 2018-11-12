@@ -1,3 +1,8 @@
+# Deprecated
+In favor of the [Vue.JS plugin](https://github.com/JetBrains/intellij-plugins/tree/master/vuejs) that comes with IntelliJ now
+
+# Vue.js Support Plugin
+
 Vue.js Support for the Intellij Platform (WebStorm, PhpStorm, Rubymine, Intellij, etc)
 
 # Install
